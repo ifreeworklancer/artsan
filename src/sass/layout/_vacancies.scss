@@ -1,0 +1,56 @@
+#vacancies {
+  padding: 100px 0;
+  @extend %img;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    @extend %pos;
+    background: rgba(#202226, .5);
+
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      background: linear-gradient(-90deg, #202226 25.52%, rgba(32, 34, 38, 0) 100%);
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50px;
+    bottom: 0;
+    width: 70px;
+    background: url('../images/icon/decor.png') 50% 50% /cover no-repeat;
+    display: none;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      display: block;
+    }
+  }
+
+  .vacancies-item {
+    position: relative;
+    z-index: 5;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &-description {
+      margin-bottom: 30px;
+
+      ul {
+        @extend %decorList;
+        
+        li {
+          color: #fff;
+        }
+      }
+      
+      p {
+        color: #fff;
+      }
+    }
+  }
+}

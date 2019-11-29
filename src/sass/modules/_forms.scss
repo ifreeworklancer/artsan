@@ -1,0 +1,68 @@
+.form-group {
+    position: relative;
+
+    .form-control {
+        border-radius: 5px;
+        background: #FFFFFF;
+        border: 1px solid #E2E4E6;
+        padding: 17px 10px;
+        color: $dark;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+            padding: 17px 15px;
+        }
+
+        ::placeholder {
+            color: #ABB1B5;
+        }
+    }
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+
+    &-order {
+
+        .form-group {
+            margin-bottom: 0;
+            flex: auto;
+            height: 100%;
+
+            .form-control {
+                height: 100%;
+                border-radius: 5px 0 0 5px;
+            }
+
+            label {
+                position: absolute;
+                top: -20px;
+                left: 0;
+                font-family: $headings-font-family;
+                font-size: .625rem;
+                text-transform: uppercase;
+                color: $primary;
+            }
+        }
+
+        .btn {
+            font-size: .625rem;
+            padding: 15px 10px;
+            border-radius: 0 5px 5px 0;
+
+            @media (min-width: map_get($grid-breakpoints, sm)) {
+                padding: 18px 13px;
+                font-size: .875rem;
+            }
+        }
+    }
+}
+
+.form-column {
+
+    .form-group {
+        width: 100%;
+    }
+}

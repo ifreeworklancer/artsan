@@ -1,0 +1,143 @@
+.contacts-list {
+
+  li {
+    margin-bottom: 30px;
+
+    a {
+      display: flex;
+      align-items: center;
+      color: $dark;
+      font-size: .875rem;
+      transition: .5s;
+
+      svg {
+        fill: $primary;
+        margin-right: 15px;
+        transition: .5s;
+      }
+
+      &:hover {
+        color: $primary;
+
+        svg {
+          fill: $dark;
+        }
+      }
+    }
+  }
+
+  &--flex {
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      display: flex;
+      align-items: center;
+    }
+
+    li {
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        margin-right: 30px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.section-description {
+  margin-bottom: 30px;
+
+  &__title {
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    max-width: 425px;
+    margin: 25px auto 0;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--both {
+
+    .section-description__title {
+      display: inline-block;
+      padding: 0 50px;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        padding: 0 130px;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 15px;
+        background: url('../images/icon/decor-title.png') 50% 50% /cover no-repeat;
+
+        @media (min-width: map_get($grid-breakpoints, md)) {
+          width: 95px;
+          height: 40px;
+        }
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
+  }
+
+  &--top {
+
+    .section-description__title {
+      padding-top: 70px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95px;
+        height: 40px;
+        background: url('../images/icon/decor-title.png') 50% 50% /cover no-repeat;
+      }
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+
+  li {
+    margin-right: 20px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+
+    a {
+      svg {
+        fill: $dark;
+        transition: .5s;
+      }
+
+      &:hover {
+
+        svg {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}

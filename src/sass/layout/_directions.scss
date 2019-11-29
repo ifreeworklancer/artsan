@@ -1,0 +1,66 @@
+#directions {
+  padding: 50px 0;
+  background: url('../images/bg/directions-bg.png') 50% 50% /cover no-repeat;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 120px 0;
+  }
+
+  .custom-tabs-directions {
+
+    .custom-tabs-nav {
+      padding: 0 15px;
+    }
+
+    .custom-accordion {
+      padding: 0 15px;
+    }
+  }
+
+  .custom-accordion-body {
+    max-height: 390px;
+    overflow-y: auto;
+  }
+
+  .directions-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: 0 16px 16px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        width: 50%;
+      }
+
+      span {
+        flex: 0 0 auto;
+
+        a {
+          color: $primary;
+          font-family: $font-family-base;
+          border-bottom: 1px solid transparent;
+          transition: .5s;
+
+          &:hover {
+            border-color: $primary;
+          }
+        }
+      }
+
+      &__separator {
+        margin: 0 15px;
+        flex: 1 0 auto !important;
+        border-bottom: 1px dashed #DADDDF;
+      }
+
+      &__value {
+        color: $dark;
+        font-family: $headings-font-family;
+      }
+    }
+  }
+}

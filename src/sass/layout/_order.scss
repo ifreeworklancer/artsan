@@ -1,0 +1,122 @@
+#order {
+  padding: 40px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    background: #202226;
+    z-index: -10;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 40px;
+    width: 70px;
+    background: url('../images/icon/decor.png') 50% 50% /cover no-repeat;
+    z-index: -5;
+  }
+
+  .order-prev {
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 60%;
+      bottom: 0;
+      margin-left: -15%;
+      z-index: 10;
+      transform: skewX(15deg);
+      padding-bottom: 0;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      right: 50%;
+      margin-left: -10%;
+    }
+
+    &__image {
+      @extend %pos;
+      @extend %img;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        right: -15%;
+        transform: skewX(-15deg);
+      }
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        right: -10%;
+      }
+    }
+
+    &__decor-bg {
+      @extend %pos;
+      width: 110%;
+      height: 100%;
+      z-index: 5;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        transform: skewX(-15deg);
+      }
+
+      #text {
+        display: none;
+
+        @media (min-width: map_get($grid-breakpoints, xl)) {
+          display: block;
+        }
+      }
+
+      #overlay {
+        mask: url(#mask);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+    }
+  }
+
+  .order-item {
+    position: relative;
+    padding: 70px 0;
+    z-index: 5;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding: 100px 0;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      padding: 140px 0;
+    }
+
+    &__decor-image {
+      @extend %img;
+      position: absolute;
+      top: -40px;
+      left: 0;
+      width: 195px;
+      height: 65px;
+    }
+
+    &__title {
+      color: $primary;
+      margin-bottom: 15px;
+    }
+
+    &__description {
+      color: #fff;
+      margin-bottom: 40px;
+    }
+  }
+}

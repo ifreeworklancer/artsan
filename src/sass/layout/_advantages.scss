@@ -1,0 +1,200 @@
+#advantages {
+  padding: 120px 0;
+  @extend %img;
+
+  &::before {
+    content: '';
+    @extend %pos;
+    background: linear-gradient(270deg, #F3F3F3 0%, rgba(243, 243, 243, 0.8) 100%);
+  }
+
+  .container {
+    width: 95%;
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      max-width: 1500px;
+    }
+  }
+}
+
+.advantages-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+
+  .advantages-col {
+    padding: 10px;
+    width: 100%;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      width: 50%;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      width: 27.50%;
+    }
+
+    &:first-of-type {
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        width: 45%;
+      }
+    }
+
+    &:last-of-type {
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        width: 45%;
+      }
+    }
+  }
+}
+
+.advantages-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 280px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  outline: 2px dashed $light;
+  outline-offset: -10px;
+  z-index: 5;
+  transition: .5s;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    max-width: 100%;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, xl)) {
+    height: 330px;
+  }
+
+  &__title {
+    font-size: .875rem;
+    color: $dark;
+    transition: .5s;
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    z-index: -2;
+
+    svg {
+      fill: #DFDFDF;
+      transition: .5s;
+    }
+  }
+
+  &:hover {
+    background: $primary;
+    outline-color: #fff;
+
+    .advantages-item__title {
+      color: #fff;
+    }
+
+    .advantages-item__icon {
+
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.advantages-description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 0 auto 40px;
+  padding: 35px 30px;
+  background: linear-gradient(120.11deg, #3E4042 0.76%, #1F2125 100%);
+  z-index: 5;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    max-width: 100%;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    margin: 0 0 0 20px;
+    height: 100%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 65px;
+    background: url('../images/icon/decor.png') 50% 50% /cover no-repeat;
+    z-index: -2;
+  }
+
+  &__logo {
+    text-align: center;
+    margin-bottom: 30px;
+
+    img {
+      max-width: 160px;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        max-width: 220px;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: .875rem;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      font-size: 1rem;
+    }
+  }
+
+  &__prev {
+    @extend %img;
+    width: 100%;
+    height: 170px;
+    margin-left: -30px;
+    margin-bottom: 20px;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      height: 190px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      height: 170px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      height: 220px;
+    }
+
+    @media (min-width: 1400px) {
+      height: 270px;
+    }
+  }
+}

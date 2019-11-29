@@ -1,0 +1,95 @@
+#cars {
+  padding: 30px 0;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 90px 0;
+  }
+}
+
+.cars-item {
+  position: relative;
+  display: block;
+  min-height: 300px;
+  padding-bottom: 55.586%;
+  z-index: 5;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    min-height: 100%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 185px;
+    height: 25px;
+    background: url('../images/icon/logo-gray.png') 50% 50% /cover no-repeat;
+  }
+
+  &-prev {
+    @extend %pos;
+    overflow: hidden;
+    z-index: -2;
+  }
+
+  &__image {
+    @extend %pos;
+    @extend %img;
+    transition: .5s;
+
+    &::before {
+      content: '';
+      @extend %pos;
+      background: linear-gradient(0, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 51.04%);
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+  }
+
+  &__description {
+    font-size: .875rem;
+    font-family: $font-family-base;
+  }
+
+  &-body {
+    position: absolute;
+    left: -30px;
+    bottom: 20px;
+    width: 100%;
+    max-width: 340px;
+    padding: 20px 25px;
+    color: #fff;
+    z-index: 5;
+    transition: .5s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      background: $primary;
+      z-index: -5;
+      transition: .5s;
+    }
+  }
+
+  &:hover {
+
+    .cars-item-body {
+      left: 0;
+
+      &::before {
+        width: 100%;
+      }
+    }
+
+    .cars-item__image {
+      transform: scale(1.2);
+    }
+  }
+}

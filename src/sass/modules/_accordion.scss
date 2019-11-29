@@ -1,0 +1,53 @@
+.custom-accordion {
+  position: relative;
+  margin-bottom: 25px;
+
+  &-nav {
+    position: relative;
+    color: $dark;
+    border-radius: 5px;
+    width: 100%;
+    padding: 20px 35px;
+    background: $primary;
+    text-align: center;
+    font-size: .875rem;
+    font-family: $headings-font-family;
+    cursor: pointer;
+    transition: .5s;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      font-size: 1.125rem;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 15px;
+      fill: $dark;
+      transition: .5s;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        right: 25px;
+      }
+    }
+
+    &.active {
+      background: $dark;
+      color: $primary;
+
+      svg {
+        fill: $primary;
+        transform: translateY(-50%) scale(-1);
+      }
+    }
+  }
+
+  &-body {
+    background: #fff;
+    padding: 35px 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 5px 5px;
+    display: none;
+  }
+}
