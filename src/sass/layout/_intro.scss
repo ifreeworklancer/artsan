@@ -1,4 +1,54 @@
 #intro {
-  background: $dark;
-  height: 100vh;
+  background: linear-gradient(151.52deg, #3E4042 0.76%, #1F2125 50.9%);
+  z-index: 5;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    background: url('../images/icon/decor.png') 50% 50% /cover no-repeat;
+    z-index: -5;
+    display: none;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      display: block;
+    }
+  }
+
+  .intro-item {
+    padding: 150px 0 50px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding: 200px 0 50px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      padding: 200px 0;
+    }
+  }
+
+  .form-settlement {
+    padding: 15px;
+    border: 2px dashed #474B4F;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+  }
+
+  .intro-map {
+    @extend %img;
+    width: 100%;
+    padding-bottom: 56.25%;
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 45%;
+      padding-bottom: 0;
+    }
+  }
 }

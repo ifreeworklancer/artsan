@@ -9,30 +9,6 @@
                     <a href="/" class="logo">
                         <img src="../../images/icon/logo.png" alt="logo">
                     </a>
-<!--                    <ul class="languages-list">-->
-<!--                        <li>-->
-<!--                            <span>-->
-<!--                                ru-->
-<!--                            </span>-->
-<!--                            <ul>-->
-<!--                                <li>-->
-<!--                                    <a href="#">-->
-<!--                                        en-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="#">-->
-<!--                                        ru-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="#">-->
-<!--                                        ua-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                    </ul>-->
                     <ul class="social-list">
                         <li>
                             <a href="<?= $facebook; ?>">
@@ -69,7 +45,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="#" class="btn btn-primary">
+                    <a href="#" class="btn btn-primary open-order">
                         заказать такси
                     </a>
                 </div>

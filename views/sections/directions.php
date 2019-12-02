@@ -34,7 +34,7 @@
                                                 <?php foreach ($item['direction'] as $value) : ?>
                                                     <li class="directions-list-item">
                                                         <span class="directions-list-item__property">
-                                                            <a href="#">
+                                                            <a href="../../single/single-direction.php">
                                                                 <?= $value['property'] ?>
                                                             </a>
                                                         </span>

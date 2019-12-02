@@ -6,6 +6,11 @@ $email = 'artisantaxi@gmail.com';
 $facebook = 'http://facebook.com';
 $instagram = 'http://instagram.com';
 
+$intro = [
+    'title' => '<span class="text-primary">Междугородние перевозки.</span> Такси по Украине, Крыму, Европе и России',
+    'description' => 'Расчитайте стоимось Вашей поездки'
+];
+
 $advantages = [
     'title' => 'Почему люди выбирают нас',
     'bg_image' => '../../images/bg/advantages-bg.jpg',
@@ -282,4 +287,54 @@ $vacancies = [
     'title' => '<span class="text-primary">Приглашаем к сотрудничеству</span> водителей с личным автотранспортом для работы в такси',
     'description' => '<ul><li>Гибкий график работы</li><li>Стабильный дополнительный доход</li></ul>',
     'image_bg' => '../../images/bg/vacancies-bg.jpg',
+];
+
+$single_direction = [
+    'intro' => [
+        'image_bg' => '../../images/bg/advantages-bg.jpg',
+        'title' => 'Запорожье - Киев',
+        'description' => '<p>Время в пути от 7-ми часов</p> <p>Расстояние от запорожья до киева 580 км в комфортабельном авто с кондиционером и приятной музыкой, а также остановки по необходимости на обустроенных автозаправках.</p>',
+    ],
+    'services' => [
+        'title' => 'В стоимость проезда входит:',
+        'items' => [
+            [
+                'image' => '../../images/content/single-direction/single-direction-1.jpg',
+                'description' => 'Ожидание в аэропорту 1 час',
+            ],
+            [
+                'image' => '../../images/content/single-direction/single-direction-2.jpg',
+                'description' => 'Погрузка багажа в авто',
+            ],
+            [
+                'image' => '../../images/content/single-direction/single-direction-3.jpg',
+                'description' => 'Встреча с табличкой',
+            ],
+            [
+                'image' => '../../images/content/single-direction/single-direction-4.jpg',
+                'description' => 'Детское кресло при необходимости',
+            ],
+        ]
+    ]
+];
+
+$single_car = [
+    'intro' => [
+        'class' => 'класс A',
+        'title' => 'Ford Fusion 2018',
+        'description' => '<p>Краткое описание авто (текстовый блок) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>',
+        'images' => [
+            '../../images/content/single-car/single-car-1.jpg',
+            '../../images/content/single-car/single-car-1.jpg',
+            '../../images/content/single-car/single-car-1.jpg',
+        ],
+    ],
+    'advantages' => [
+        'преимущественные особенности авто',
+        'преимущественные особенности авто',
+        'преимущественные особенности авто',
+        'преимущественные особенности авто',
+        'преимущественные особенности авто',
+        'преимущественные особенности авто',
+    ]
 ];

@@ -14,7 +14,7 @@
             </div>
             <?php foreach ($cars['items'] as $item) : ?>
                 <div class="col-sm-8 col-lg-6 p-3 p-lg-4">
-                    <a href="#" class="cars-item">
+                    <a href="../../single/single-car.php" class="cars-item">
                         <div class="cars-item-prev">
                             <figure class="cars-item__image"
                                     style="background-image: url(<?= $item['image']; ?>);"></figure>

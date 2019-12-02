@@ -1,68 +1,371 @@
 .form-group {
-    position: relative;
+  position: relative;
+
+  label {
+    margin-bottom: 10px;
+    font-family: $headings-font-family;
+    font-size: .625rem;
+    text-transform: uppercase;
+    color: $primary;
+  }
+
+  .form-control {
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 1px solid #E2E4E6;
+    padding: 17px 10px;
+    color: $dark;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding: 17px 15px;
+    }
+
+    ::placeholder {
+      color: #ABB1B5;
+    }
+  }
+
+  &-settlement {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background: #F4F4F4;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    border-left: 2px solid $primary;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding: 5px 5px 5px 25px;
+    }
+
+    label {
+      color: $body-color;
+      padding-right: 5px;
+      margin-bottom: 0;
+      width: 20%;
+      font-size: .875rem;
+      font-family: $font-family-base;
+      text-transform: none;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        font-size: 1rem;
+        width: 15%;
+      }
+    }
 
     .form-control {
-        border-radius: 5px;
-        background: #FFFFFF;
-        border: 1px solid #E2E4E6;
-        padding: 17px 10px;
-        color: $dark;
+      width: 80%;
+      background: #F4F4F4;
+      border: 1px solid #E2E4E6;
+      border-radius: 5px;
+      transition: .5s;
 
-        @media (min-width: map_get($grid-breakpoints, sm)) {
-            padding: 17px 15px;
-        }
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        width: 85%;
+      }
 
-        ::placeholder {
-            color: #ABB1B5;
-        }
+      &:focus {
+        background: #fff;
+      }
     }
+  }
+
+  &-check {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      flex-wrap: nowrap;
+    }
+
+    .form-radio {
+      width: 100%;
+      margin-bottom: 10px;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        width: 80%;
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+
+    }
+
+    .button-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        width: 20%;
+      }
+
+      .btn {
+        width: 100%;
+        display: flex;
+
+        &-dark {
+          display: none;
+          padding: 10px $btn-padding-x;
+          margin-bottom: 10px;
+        }
+
+        &-primary {
+          flex: 1 0 auto;
+        }
+      }
+
+      .btn-submit {
+        display: flex;
+      }
+
+      .open-order {
+        display: none;
+      }
+    }
+
+    .form-result {
+      width: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &.is-completed {
+
+      .form-radio {
+        width: 100%;
+
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+          width: 40%;
+        }
+
+        label {
+          width: 100%;
+        }
+
+        &__title {
+
+          @media (min-width: map_get($grid-breakpoints, lg)) {
+            width: 40%;
+          }
+        }
+
+        &-group {
+          width: 60%;
+        }
+      }
+
+      .button-group {
+
+        .btn-dark {
+          display: flex;
+        }
+
+        .open-order {
+          display: flex;
+        }
+
+        .btn-submit {
+          display: none;
+        }
+      }
+
+      .form-result {
+        padding: 20px 0;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+          width: 40%;
+        }
+
+      }
+    }
+  }
+
+  .form-result {
+    transition: .5s;
+
+    &__title {
+      text-align: center;
+      text-transform: uppercase;
+      color: $primary;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    &-list {
+
+      li {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 16px;
+
+        div {
+          padding: 0 8px;
+          width: 50%;
+          font-size: .875rem;
+
+          &:first-of-type {
+            text-align: right;
+          }
+          
+          &:last-of-type {
+            color: #fff;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .form-radio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    background: #F4F4F4;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    border-left: 2px solid $primary;
+    transition: .5s;
+    overflow: hidden;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      flex-direction: row;
+      padding: 5px 5px 5px 25px;
+    }
+
+    &__title {
+      transition: .5s;
+      margin-bottom: 10px;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        width: 20%;
+        margin-bottom: 0;
+      }
+    }
+
+    &-group {
+      display: flex;
+      transition: .5s;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        width: 80%;
+      }
+
+      label {
+        position: relative;
+        width: 33.3333%;
+        padding: 0 5px;
+        margin-bottom: 0;
+        opacity: 1;
+        cursor: pointer;
+        transition: opacity 0.5s, width .8s, padding .8s;
+
+        &.is-hidden {
+          transform: translateX(100%);
+          width: 0;
+          opacity: 0;
+          padding: 0;
+        }
+
+        input:checked ~ .form-radio-group__description::before {
+          width: 100%;
+        }
+
+        input:checked ~ .form-radio-group__image {
+          background-color: $primary;
+        }
+      }
+
+      input[type="radio"] {
+        position: absolute;
+        left: -99999999px;
+      }
+
+      &__image {
+        @extend %img;
+        background-color: #E1E4E7;
+        width: 100%;
+        padding-bottom: 80%;
+        margin-bottom: 10px;
+        transition: .5s;
+      }
+
+      &__title {
+        font-size: .875rem;
+      }
+
+      &__description {
+        position: relative;
+        padding-bottom: 10px;
+        font-size: .75rem;
+        color: #ADB1B4;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -4px;
+          width: 0;
+          height: 2px;
+          background: $primary;
+          transition: .5s;
+        }
+      }
+    }
+  }
 }
 
 .form-row {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
 
-    &-order {
+  &-order {
 
-        .form-group {
-            margin-bottom: 0;
-            flex: auto;
-            height: 100%;
+    .form-group {
+      margin-bottom: 0;
+      flex: auto;
+      height: 100%;
 
-            .form-control {
-                height: 100%;
-                border-radius: 5px 0 0 5px;
-            }
+      .form-control {
+        height: 100%;
+        border-radius: 5px 0 0 5px;
+      }
 
-            label {
-                position: absolute;
-                top: -20px;
-                left: 0;
-                font-family: $headings-font-family;
-                font-size: .625rem;
-                text-transform: uppercase;
-                color: $primary;
-            }
-        }
-
-        .btn {
-            font-size: .625rem;
-            padding: 15px 10px;
-            border-radius: 0 5px 5px 0;
-
-            @media (min-width: map_get($grid-breakpoints, sm)) {
-                padding: 18px 13px;
-                font-size: .875rem;
-            }
-        }
+      label {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        font-family: $headings-font-family;
+        border-radius: 5px 0 0 5px;
+        font-size: .625rem;
+        text-transform: uppercase;
+        color: $primary;
+      }
     }
+
+    .btn {
+      font-size: .625rem;
+      padding: 15px 10px;
+      border-radius: 0 5px 5px 0;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        padding: 18px 13px;
+        font-size: .875rem;
+      }
+    }
+  }
 }
 
 .form-column {
 
-    .form-group {
-        width: 100%;
-    }
+  .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
 }

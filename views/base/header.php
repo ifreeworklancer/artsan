@@ -69,14 +69,9 @@
                         </a>
                     </li>
                 </ul>
-                <a href="#" class="btn btn-primary d-none d-lg-inline-flex">
+                <a href="#" class="btn btn-primary open-order">
                     заказать такси
                 </a>
-                <div class="burger-menu">
-                    <div class="line line--top"></div>
-                    <div class="line line--middle"></div>
-                    <div class="line line--bottom"></div>
-                </div>
             </div>
         </div>
     </div>

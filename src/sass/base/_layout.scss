@@ -54,6 +54,35 @@
   &__text {
     max-width: 425px;
     margin: 25px auto 0;
+
+    &--decor {
+      position: relative;
+      max-width: 100%;
+      margin: 25px 0 0;
+      padding-left: 100px;
+      font-size: 1.125rem;
+      color: #fff;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        padding-left: 180px;
+        font-size: 1.5rem;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: .75rem;
+        left: 0;
+        width: 80px;
+        height: 2px;
+        background: $primary;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          top: 1rem;
+          width: 150px;
+        }
+      }
+    }
   }
 
   &--center {

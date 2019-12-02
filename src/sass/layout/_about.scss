@@ -16,6 +16,11 @@
     height: 200px;
     background: url('../images/icon/decor-rectangle-gray.png') 50% 50% /cover no-repeat;
     z-index: -2;
+    display: none;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      display: block;
+    }
   }
 
   .about-item {

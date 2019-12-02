@@ -18,6 +18,15 @@ a {
     font-family: $headings-font-family;
 }
 
+h1 {
+    font-size: 1.5rem;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+        font-size: $h1-font-size;
+    }
+}
+
+
 
 h2 {
     font-size: 1.5rem;

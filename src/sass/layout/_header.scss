@@ -22,12 +22,26 @@
       padding: 0 30px;
     }
   }
+
+  .btn {
+    font-size: .75rem;
+    padding: 10px 15px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding: $btn-padding-y $btn-padding-x;
+      font-size: .875rem;
+    }
+  }
 }
 
 .logo {
 
   img {
-    max-width: 120px;
+    max-width: 80px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      max-width: 120px;
+    }
 
     @media (min-width: map_get($grid-breakpoints, xl)) {
       max-width: 180px;
@@ -44,13 +58,18 @@
 
   li {
     position: relative;
-    width: 60px;
-    height: 80px;
+    width: 40px;
+    height: 60px;
     background: $secondary;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      width: 60px;
+      height: 80px;
+    }
 
     span {
       font-size: .875rem;
@@ -60,13 +79,17 @@
 
     ul {
       position: absolute;
-      top: 80px;
+      top: 60px;
       left: 0;
       right: 0;
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
       transition: .5s;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        top: 80px;
+      }
 
       li {
         width: 100%;

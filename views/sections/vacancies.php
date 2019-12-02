@@ -10,7 +10,7 @@
                     <div class="vacancies-item-description">
                         <?= $vacancies['description']; ?>
                     </div>
-                    <a href="#" class="btn btn-primary">
+                    <a href="#" class="btn btn-primary open-vacancies">
                         оставить заявку
                     </a>
                 </div>

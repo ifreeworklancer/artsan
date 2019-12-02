@@ -44,7 +44,7 @@
                     <div>
                         <figure class="advantages-description__prev"
                                 style="background-image: url('../../images/content/advantages/advantages-item.png');"></figure>
-                        <a href="#" class="btn btn-primary d-flex">
+                        <a href="#" class="btn btn-primary d-flex open-order">
                             заказать такси
                         </a>
                     </div>
